@@ -1,8 +1,78 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard - Biblioteca Digital";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1 class="mb-4">Dashboard - Biblioteca Digital</h1>
+
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Livros</h5>
+                    <p class="card-text display-4">@ViewBag.TotalBooks</p>
+                    <a asp-controller="Books" asp-action="Index" class="btn btn-light btn-sm">Ver Livros</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Autores</h5>
+                    <p class="card-text display-4">@ViewBag.TotalAuthors</p>
+                    <a asp-controller="Authors" asp-action="Index" class="btn btn-light btn-sm">Ver Autores</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Empréstimos Ativos</h5>
+                    <p class="card-text display-4">@ViewBag.ActiveLoans</p>
+                    <a asp-controller="Loans" asp-action="Active" class="btn btn-light btn-sm">Ver Ativos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-danger">
+                <div class="card-body">
+                    <h5 class="card-title">Empréstimos Atrasados</h5>
+                    <p class="card-text display-4">@ViewBag.OverdueLoans</p>
+                    <a asp-controller="Loans" asp-action="Overdue" class="btn btn-light btn-sm">Ver Atrasados</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Ações Rápidas</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <a asp-controller="Books" asp-action="Create" class="btn btn-primary btn-lg btn-block w-100">
+                                <i class="bi bi-plus-circle"></i> Adicionar Livro
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <a asp-controller="Authors" asp-action="Create" class="btn btn-success btn-lg btn-block w-100">
+                                <i class="bi bi-plus-circle"></i> Adicionar Autor
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <a asp-controller="Loans" asp-action="Create" class="btn btn-info btn-lg btn-block w-100">
+                                <i class="bi bi-plus-circle"></i> Realizar Empréstimo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

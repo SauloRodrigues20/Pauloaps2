@@ -1,0 +1,70 @@
+@model IEnumerable<Library.Application.ViewModels.BookViewModel>
+
+@{
+    ViewData["Title"] = "Livros";
+}
+
+<div class="container">
+    <h1>Livros</h1>
+
+    <div class="row mb-3">
+        <div class="col-md-8">
+            <form asp-action="Index" method="get" class="form-inline">
+                <div class="input-group w-100">
+                    <input type="text" name="searchString" value="@ViewBag.SearchString" class="form-control" placeholder="Buscar por título..." />
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                    @if (!string.IsNullOrEmpty(ViewBag.SearchString))
+                    {
+                        <a asp-action="Index" class="btn btn-secondary">Limpar</a>
+                    }
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="Create" class="btn btn-success">Novo Livro</a>
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>ISBN</th>
+                <th>Ano</th>
+                <th>Autor</th>
+                <th>Cópias Disponíveis</th>
+                <th>Total de Cópias</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.ISBN</td>
+                    <td>@item.PublicationYear</td>
+                    <td>@item.AuthorName</td>
+                    <td>
+                        <span class="badge @(item.AvailableCopies > 0 ? "bg-success" : "bg-danger")">
+                            @item.AvailableCopies
+                        </span>
+                    </td>
+                    <td>@item.TotalCopies</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalhes</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            Nenhum livro encontrado.
+        </div>
+    }
+</div>

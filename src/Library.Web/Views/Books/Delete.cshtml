@@ -1,0 +1,61 @@
+@model Library.Application.ViewModels.BookViewModel
+
+@{
+    ViewData["Title"] = "Excluir Livro";
+}
+
+<div class="container">
+    <h1>Excluir Livro</h1>
+
+    @if (ViewBag.CanDelete == false)
+    {
+        <div class="alert alert-danger">
+            <strong>Atenção!</strong> Este livro não pode ser excluído porque possui empréstimos ativos.
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            <strong>Confirme a exclusão:</strong> Tem certeza que deseja excluir este livro?
+        </div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Título</dt>
+                <dd class="col-sm-9">@Model.Title</dd>
+
+                <dt class="col-sm-3">ISBN</dt>
+                <dd class="col-sm-9">@Model.ISBN</dd>
+
+                <dt class="col-sm-3">Ano de Publicação</dt>
+                <dd class="col-sm-9">@Model.PublicationYear</dd>
+
+                <dt class="col-sm-3">Autor</dt>
+                <dd class="col-sm-9">@Model.AuthorName</dd>
+
+                <dt class="col-sm-3">Cópias Disponíveis</dt>
+                <dd class="col-sm-9">@Model.AvailableCopies</dd>
+
+                <dt class="col-sm-3">Total de Cópias</dt>
+                <dd class="col-sm-9">@Model.TotalCopies</dd>
+            </dl>
+        </div>
+    </div>
+
+    @if (ViewBag.CanDelete != false)
+    {
+        <form asp-action="Delete" method="post" class="mt-3">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    }
+    else
+    {
+        <div class="mt-3">
+            <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        </div>
+    }
+</div>

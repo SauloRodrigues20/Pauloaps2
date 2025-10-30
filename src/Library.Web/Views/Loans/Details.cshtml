@@ -1,0 +1,57 @@
+@model Library.Application.ViewModels.LoanViewModel
+
+@{
+    ViewData["Title"] = "Detalhes do Empréstimo";
+}
+
+<div class="container">
+    <h1>Detalhes do Empréstimo</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Livro</dt>
+                <dd class="col-sm-9">@Model.BookTitle</dd>
+
+                <dt class="col-sm-3">Membro</dt>
+                <dd class="col-sm-9">@Model.MemberName</dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9">@Model.MemberEmail</dd>
+
+                <dt class="col-sm-3">Data do Empréstimo</dt>
+                <dd class="col-sm-9">@Model.LoanDate.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Data de Devolução</dt>
+                <dd class="col-sm-9">@Model.DueDate.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Data de Retorno</dt>
+                <dd class="col-sm-9">@(Model.ReturnDate?.ToString("dd/MM/yyyy") ?? "Ainda não devolvido")</dd>
+
+                <dt class="col-sm-3">Status</dt>
+                <dd class="col-sm-9">
+                    @if (Model.Status == "Returned")
+                    {
+                        <span class="badge bg-success">Devolvido</span>
+                    }
+                    else if (Model.IsOverdue)
+                    {
+                        <span class="badge bg-danger">Atrasado</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary">Ativo</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        @if (Model.Status != "Returned")
+        {
+            <a asp-action="Return" asp-route-id="@Model.Id" class="btn btn-warning">Devolver Livro</a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    </div>
+</div>

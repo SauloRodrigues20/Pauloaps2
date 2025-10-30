@@ -5,56 +5,94 @@
 }
 
 <div class="container">
-    <h1>Novo Livro</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            <i class="fas fa-book-medical me-2"></i>Cadastrar Novo Livro
+        </h1>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Voltar
+        </a>
+    </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8">
-            <form asp-action="Create" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                <div class="form-group mb-3">
-                    <label asp-for="Title" class="control-label"></label>
-                    <input asp-for="Title" class="form-control" />
-                    <span asp-validation-for="Title" class="text-danger"></span>
+            <div class="card shadow-lg">
+                <div class="card-header text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-info-circle me-2"></i>Informações do Livro
+                    </h4>
                 </div>
+                <div class="card-body p-4">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="ISBN" class="control-label"></label>
-                    <input asp-for="ISBN" class="form-control" />
-                    <span asp-validation-for="ISBN" class="text-danger"></span>
-                </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="Title" class="form-label">
+                                <i class="fas fa-heading text-primary me-2"></i>Título
+                            </label>
+                            <input asp-for="Title" class="form-control form-control-lg" placeholder="Digite o título do livro" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="PublicationYear" class="control-label"></label>
-                    <input asp-for="PublicationYear" class="form-control" type="number" />
-                    <span asp-validation-for="PublicationYear" class="text-danger"></span>
-                </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="ISBN" class="form-label">
+                                <i class="fas fa-barcode text-primary me-2"></i>ISBN
+                            </label>
+                            <input asp-for="ISBN" class="form-control form-control-lg" placeholder="Digite o ISBN" />
+                            <span asp-validation-for="ISBN" class="text-danger"></span>
+                        </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="AuthorId" class="control-label"></label>
-                    <select asp-for="AuthorId" class="form-control" asp-items="ViewBag.Authors">
-                        <option value="">-- Selecione um Autor --</option>
-                    </select>
-                    <span asp-validation-for="AuthorId" class="text-danger"></span>
-                </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="PublicationYear" class="form-label">
+                                <i class="fas fa-calendar-alt text-primary me-2"></i>Ano de Publicação
+                            </label>
+                            <input asp-for="PublicationYear" class="form-control form-control-lg" type="number" placeholder="Digite o ano" />
+                            <span asp-validation-for="PublicationYear" class="text-danger"></span>
+                        </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="TotalCopies" class="control-label"></label>
-                    <input asp-for="TotalCopies" class="form-control" type="number" min="0" />
-                    <span asp-validation-for="TotalCopies" class="text-danger"></span>
-                </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="AuthorId" class="form-label">
+                                <i class="fas fa-user-edit text-primary me-2"></i>Autor
+                            </label>
+                            <select asp-for="AuthorId" class="form-select form-select-lg" asp-items="ViewBag.Authors">
+                                <option value="">-- Selecione um Autor --</option>
+                            </select>
+                            <span asp-validation-for="AuthorId" class="text-danger"></span>
+                        </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="AvailableCopies" class="control-label"></label>
-                    <input asp-for="AvailableCopies" class="form-control" type="number" min="0" />
-                    <span asp-validation-for="AvailableCopies" class="text-danger"></span>
-                </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label asp-for="TotalCopies" class="form-label">
+                                        <i class="fas fa-books text-primary me-2"></i>Total de Cópias
+                                    </label>
+                                    <input asp-for="TotalCopies" class="form-control form-control-lg" type="number" min="0" placeholder="0" />
+                                    <span asp-validation-for="TotalCopies" class="text-danger"></span>
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label asp-for="AvailableCopies" class="form-label">
+                                        <i class="fas fa-check-circle text-primary me-2"></i>Cópias Disponíveis
+                                    </label>
+                                    <input asp-for="AvailableCopies" class="form-control form-control-lg" type="number" min="0" placeholder="0" />
+                                    <span asp-validation-for="AvailableCopies" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg px-5">
+                                <i class="fas fa-times me-2"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                <i class="fas fa-save me-2"></i>Salvar Livro
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

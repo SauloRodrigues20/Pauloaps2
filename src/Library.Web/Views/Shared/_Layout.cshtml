@@ -1,19 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Library.Web</title>
+    <title>@ViewData["Title"] - Biblioteca Digital</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Library.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-gradient shadow-lg mb-4">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Biblioteca Digital</a>
+                <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-book-reader me-2"></i>Biblioteca Digital
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,16 +24,24 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="fas fa-home me-1"></i>Dashboard
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Livros</a>
+                            <a class="nav-link" asp-area="" asp-controller="Books" asp-action="Index">
+                                <i class="fas fa-book me-1"></i>Livros
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Autores</a>
+                            <a class="nav-link" asp-area="" asp-controller="Authors" asp-action="Index">
+                                <i class="fas fa-user-edit me-1"></i>Autores
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Loans" asp-action="Index">Empréstimos</a>
+                            <a class="nav-link" asp-area="" asp-controller="Loans" asp-action="Index">
+                                <i class="fas fa-exchange-alt me-1"></i>Empréstimos
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -57,9 +68,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Biblioteca Digital - Sistema de Gerenciamento de Biblioteca
+    <footer class="footer-custom mt-5 py-4">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="fas fa-book-open me-2"></i>
+                &copy; 2025 - Biblioteca Digital - Sistema de Gerenciamento de Biblioteca
+            </p>
+            <small class="text-white-50">Desenvolvido com <i class="fas fa-heart text-danger"></i> para amantes de livros</small>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

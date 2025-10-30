@@ -1,113 +1,103 @@
 is_global = true
 build_property.TargetFramework = net9.0
-build_property.TargetFramework = net9.0
-build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
-build_property.UsingMicrosoftNETSdkWeb = true
-build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library.Web
 build_property.RootNamespace = Library.Web
-build_property.ProjectDir = /home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/
+build_property.ProjectDir = /workspaces/Pauloaps2/src/Library.Web/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 9.0
+build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web
+build_property.MSBuildProjectDirectory = /workspaces/Pauloaps2/src/Library.Web
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 9.0
-build_property.EnableCodeStyleSeverity = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Authors/Create.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Authors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9ycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Authors/Delete.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Authors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9ycy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Authors/Details.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Authors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9ycy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Authors/Edit.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Authors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9ycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Authors/Index.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Authors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9ycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Books/Create.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Books/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Books/Delete.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Books/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Books/Details.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Books/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Books/Edit.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Books/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Books/Index.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Books/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Home/Index.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Home/Privacy.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Loans/Create.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Loans/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hbnMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Loans/Details.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Loans/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hbnMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Loans/Index.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Loans/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hbnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Loans/Return.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Loans/Return.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hbnMvUmV0dXJuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Shared/Error.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/_ViewImports.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/_ViewStart.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Views/Shared/_Layout.cshtml]
+[/workspaces/Pauloaps2/src/Library.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6l1yfcj0sy

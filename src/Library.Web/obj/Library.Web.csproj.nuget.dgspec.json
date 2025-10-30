@@ -1,36 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Library.Web.csproj": {}
+    "/workspaces/Pauloaps2/src/Library.Web/Library.Web.csproj": {}
   },
   "projects": {
-    "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/Library.Application.csproj": {
+    "/workspaces/Pauloaps2/src/Library.Application/Library.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/Library.Application.csproj",
+        "projectUniqueName": "/workspaces/Pauloaps2/src/Library.Application/Library.Application.csproj",
         "projectName": "Library.Application",
-        "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/Library.Application.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/obj/",
+        "projectPath": "/workspaces/Pauloaps2/src/Library.Application/Library.Application.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Pauloaps2/src/Library.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
-                "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj"
+              "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
+                "projectPath": "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj"
               },
-              "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
-                "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj"
+              "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
+                "projectPath": "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj"
               }
             }
           }
@@ -44,12 +44,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[4.13.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -66,31 +71,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
+    "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj",
+        "projectUniqueName": "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj",
         "projectName": "Library.Domain",
-        "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/obj/",
+        "projectPath": "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Pauloaps2/src/Library.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -103,12 +108,11 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -125,34 +129,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
+    "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj",
+        "projectUniqueName": "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj",
         "projectName": "Library.Infrastructure",
-        "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/obj/",
+        "projectPath": "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Pauloaps2/src/Library.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
-                "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Domain/Library.Domain.csproj"
+              "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj": {
+                "projectPath": "/workspaces/Pauloaps2/src/Library.Domain/Library.Domain.csproj"
               }
             }
           }
@@ -166,26 +170,33 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             }
           },
           "imports": [
@@ -204,37 +215,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Library.Web.csproj": {
+    "/workspaces/Pauloaps2/src/Library.Web/Library.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Library.Web.csproj",
+        "projectUniqueName": "/workspaces/Pauloaps2/src/Library.Web/Library.Web.csproj",
         "projectName": "Library.Web",
-        "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/Library.Web.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Web/obj/",
+        "projectPath": "/workspaces/Pauloaps2/src/Library.Web/Library.Web.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Pauloaps2/src/Library.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/Library.Application.csproj": {
-                "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Application/Library.Application.csproj"
+              "/workspaces/Pauloaps2/src/Library.Application/Library.Application.csproj": {
+                "projectPath": "/workspaces/Pauloaps2/src/Library.Application/Library.Application.csproj"
               },
-              "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
-                "projectPath": "/home/runner/work/Pauloaps2/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj"
+              "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj": {
+                "projectPath": "/workspaces/Pauloaps2/src/Library.Infrastructure/Library.Infrastructure.csproj"
               }
             }
           }
@@ -248,18 +259,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.10, )"
             }
           },
           "imports": [
@@ -281,7 +291,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

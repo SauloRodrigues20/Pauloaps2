@@ -1,0 +1,12 @@
+/workspaces/Pauloaps2/src/Library.Domain/bin/Debug/net8.0/Library.Domain.deps.json
+/workspaces/Pauloaps2/src/Library.Domain/bin/Debug/net8.0/Library.Domain.dll
+/workspaces/Pauloaps2/src/Library.Domain/bin/Debug/net8.0/Library.Domain.pdb
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.AssemblyInfoInputs.cache
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.AssemblyInfo.cs
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.csproj.CoreCompileInputs.cache
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.sourcelink.json
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.dll
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/refint/Library.Domain.dll
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/Library.Domain.pdb
+/workspaces/Pauloaps2/src/Library.Domain/obj/Debug/net8.0/ref/Library.Domain.dll

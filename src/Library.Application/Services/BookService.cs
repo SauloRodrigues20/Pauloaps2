@@ -52,10 +52,9 @@ namespace Library.Application.Services
         {
             var book = await _bookRepository.GetByIdAsync(bookViewModel.Id);
             if (book == null)
-            {
                 return false;
-            }
 
+            // atualizar informações do livro
             book.Title = bookViewModel.Title;
             book.ISBN = bookViewModel.ISBN;
             book.PublicationYear = bookViewModel.PublicationYear;

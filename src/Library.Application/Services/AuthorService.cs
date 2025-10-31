@@ -48,10 +48,9 @@ namespace Library.Application.Services
         {
             var author = await _authorRepository.GetByIdAsync(authorViewModel.Id);
             if (author == null)
-            {
                 return false;
-            }
 
+            // atualizar os dados do autor
             author.FirstName = authorViewModel.FirstName;
             author.LastName = authorViewModel.LastName;
             author.BirthDate = authorViewModel.BirthDate;

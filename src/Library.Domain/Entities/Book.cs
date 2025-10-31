@@ -33,24 +33,38 @@ namespace Library.Domain.Entities
 
         public bool BorrowCopy()
         {
-            if (AvailableCopies <= 0) return false;
+            // verifica se tem cópias disponíveis
+            if (AvailableCopies <= 0)
+                return false;
+            
             AvailableCopies--;
             return true;
         }
 
         public bool ReturnCopy()
         {
-            if (AvailableCopies >= TotalCopies) return false;
+            // não pode ter mais disponíveis que o total
+            if (AvailableCopies >= TotalCopies)
+                return false;
+            
             AvailableCopies++;
             return true;
         }
 
         public bool ValidateISBN()
         {
-            if (string.IsNullOrWhiteSpace(ISBN)) return false;
+            if (string.IsNullOrWhiteSpace(ISBN))
+                return false;
+            
+            // remove espaços e hífens
             var cleanISBN = Regex.Replace(ISBN, @"[\s-]", "");
-            if (cleanISBN.Length == 10) return ValidateISBN10(cleanISBN);
-            if (cleanISBN.Length == 13) return ValidateISBN13(cleanISBN);
+            
+            // valida ISBN-10 ou ISBN-13
+            if (cleanISBN.Length == 10)
+                return ValidateISBN10(cleanISBN);
+            else if (cleanISBN.Length == 13)
+                return ValidateISBN13(cleanISBN);
+            
             return false;
         }
 

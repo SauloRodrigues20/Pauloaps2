@@ -28,11 +28,13 @@ public class HomeController : Controller
     {
         try
         {
+            // buscar os dados pra dashboard
             var books = await _bookService.GetAllAsync();
             var authors = await _authorService.GetAllAsync();
             var activeLoans = await _loanService.GetActiveLoansAsync();
             var overdueLoans = await _loanService.GetOverdueLoansAsync();
 
+            // passar os totais pra view
             ViewBag.TotalBooks = books.Count();
             ViewBag.TotalAuthors = authors.Count();
             ViewBag.ActiveLoans = activeLoans.Count();
@@ -42,6 +44,7 @@ public class HomeController : Controller
         }
         catch (Exception ex)
         {
+            // se der erro, retorna zeros
             _logger.LogError(ex, "Error loading dashboard");
             ViewBag.TotalBooks = 0;
             ViewBag.TotalAuthors = 0;

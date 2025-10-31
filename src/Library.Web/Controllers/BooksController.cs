@@ -27,6 +27,7 @@ namespace Library.Web.Controllers
             {
                 IEnumerable<BookViewModel> books;
 
+                // busca por título se tiver string de pesquisa
                 if (!string.IsNullOrEmpty(searchString))
                 {
                     books = await _bookService.SearchByTitleAsync(searchString);

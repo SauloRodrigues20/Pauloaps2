@@ -5,9 +5,6 @@ using Library.Infrastructure.Repositories;
 
 namespace Library.Application.Services
 {
-    /// <summary>
-    /// Service implementation for book operations
-    /// </summary>
     public class BookService : IBookService
     {
         private readonly IBookRepository _bookRepository;

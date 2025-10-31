@@ -5,9 +5,6 @@ using Library.Application.Interfaces;
 
 namespace Library.Web.Controllers;
 
-/// <summary>
-/// Home controller with dashboard functionality
-/// </summary>
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -27,9 +24,6 @@ public class HomeController : Controller
         _loanService = loanService;
     }
 
-    /// <summary>
-    /// Dashboard with library statistics
-    /// </summary>
     public async Task<IActionResult> Index()
     {
         try

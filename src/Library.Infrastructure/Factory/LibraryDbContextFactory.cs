@@ -4,9 +4,6 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace Library.Infrastructure.Factory
 {
-    /// <summary>
-    /// Factory for creating LibraryDbContext instances at design time (for migrations)
-    /// </summary>
     public class LibraryDbContextFactory : IDesignTimeDbContextFactory<LibraryDbContext>
     {
         public LibraryDbContext CreateDbContext(string[] args)

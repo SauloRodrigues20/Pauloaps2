@@ -4,9 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library.Infrastructure.Repositories
 {
-    /// <summary>
-    /// Repository implementation for author operations
-    /// </summary>
     public class AuthorRepository : IAuthorRepository
     {
         private readonly LibraryDbContext _context;

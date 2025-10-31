@@ -25,7 +25,7 @@
             {
                 <tr>
                     <td>@item.FullName</td>
-                    <td>@(item.BirthDate?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                    <td>@item.BirthDate.ToString("dd/MM/yyyy")</td>
                     <td>
                         <span class="badge bg-primary">@item.BooksCount</span>
                     </td>

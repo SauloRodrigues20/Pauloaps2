@@ -2,10 +2,6 @@ using Library.Application.Interfaces;
 
 namespace Library.Application.Services;
 
-/// <summary>
-/// Null implementation of Firebase Storage Service
-/// Used when Firebase is not configured
-/// </summary>
 public class NullFirebaseStorageService : IFirebaseStorageService
 {
     public Task<string> UploadFileAsync(Stream fileStream, string fileName, string contentType)

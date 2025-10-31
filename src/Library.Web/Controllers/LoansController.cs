@@ -5,9 +5,6 @@ using Library.Application.ViewModels;
 
 namespace Library.Web.Controllers
 {
-    /// <summary>
-    /// Controller for loan management operations
-    /// </summary>
     public class LoansController : Controller
     {
         private readonly ILoanService _loanService;
@@ -24,9 +21,6 @@ namespace Library.Web.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// Lists all loans
-        /// </summary>
         public async Task<IActionResult> Index()
         {
             try
@@ -42,9 +36,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows loan details
-        /// </summary>
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -70,9 +61,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows create loan form
-        /// </summary>
         public async Task<IActionResult> Create()
         {
             await LoadBooksSelectList();
@@ -87,9 +75,6 @@ namespace Library.Web.Controllers
             return View(model);
         }
 
-        /// <summary>
-        /// Handles create loan form submission
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LoanViewModel loanViewModel)
@@ -120,9 +105,6 @@ namespace Library.Web.Controllers
             return View(loanViewModel);
         }
 
-        /// <summary>
-        /// Shows return loan form
-        /// </summary>
         public async Task<IActionResult> Return(Guid? id)
         {
             if (id == null)
@@ -154,9 +136,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Handles return loan confirmation
-        /// </summary>
         [HttpPost, ActionName("Return")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ReturnConfirmed(Guid id)
@@ -182,9 +161,6 @@ namespace Library.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        /// <summary>
-        /// Shows active loans
-        /// </summary>
         public async Task<IActionResult> Active()
         {
             try
@@ -200,9 +176,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows overdue loans
-        /// </summary>
         public async Task<IActionResult> Overdue()
         {
             try
@@ -218,9 +191,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Loads books for dropdown
-        /// </summary>
         private async Task LoadBooksSelectList()
         {
             var books = await _bookService.GetAllAsync();

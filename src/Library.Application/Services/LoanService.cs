@@ -5,9 +5,6 @@ using Library.Infrastructure.Repositories;
 
 namespace Library.Application.Services
 {
-    /// <summary>
-    /// Service implementation for loan operations
-    /// </summary>
     public class LoanService : ILoanService
     {
         private readonly ILoanRepository _loanRepository;

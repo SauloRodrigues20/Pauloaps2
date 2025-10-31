@@ -5,9 +5,6 @@ using Library.Infrastructure.Repositories;
 
 namespace Library.Application.Services
 {
-    /// <summary>
-    /// Service implementation for author operations
-    /// </summary>
     public class AuthorService : IAuthorService
     {
         private readonly IAuthorRepository _authorRepository;

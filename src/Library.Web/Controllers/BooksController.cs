@@ -5,9 +5,6 @@ using Library.Application.ViewModels;
 
 namespace Library.Web.Controllers
 {
-    /// <summary>
-    /// Controller for book management operations
-    /// </summary>
     public class BooksController : Controller
     {
         private readonly IBookService _bookService;
@@ -24,9 +21,6 @@ namespace Library.Web.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// Lists all books
-        /// </summary>
         public async Task<IActionResult> Index(string searchString)
         {
             try
@@ -53,9 +47,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows book details
-        /// </summary>
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -81,18 +72,12 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows create form
-        /// </summary>
         public async Task<IActionResult> Create()
         {
             await LoadAuthorsSelectList();
             return View();
         }
 
-        /// <summary>
-        /// Handles create form submission
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BookViewModel bookViewModel)
@@ -116,9 +101,6 @@ namespace Library.Web.Controllers
             return View(bookViewModel);
         }
 
-        /// <summary>
-        /// Shows edit form
-        /// </summary>
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -145,9 +127,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Handles edit form submission
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, BookViewModel bookViewModel)
@@ -183,9 +162,6 @@ namespace Library.Web.Controllers
             return View(bookViewModel);
         }
 
-        /// <summary>
-        /// Shows delete confirmation
-        /// </summary>
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -214,9 +190,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Handles delete confirmation
-        /// </summary>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
@@ -249,9 +222,6 @@ namespace Library.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        /// <summary>
-        /// Loads authors for dropdown
-        /// </summary>
         private async Task LoadAuthorsSelectList()
         {
             var authors = await _authorService.GetAllAsync();

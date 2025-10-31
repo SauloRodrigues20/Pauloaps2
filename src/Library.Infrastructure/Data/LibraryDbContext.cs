@@ -3,36 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library.Infrastructure.Data
 {
-    /// <summary>
-    /// Database context for the Library application
-    /// </summary>
     public class LibraryDbContext : DbContext
     {
-        /// <summary>
-        /// Constructor with options
-        /// </summary>
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options)
         {
         }
 
-        /// <summary>
-        /// Books DbSet
-        /// </summary>
         public DbSet<Book> Books { get; set; }
 
-        /// <summary>
-        /// Authors DbSet
-        /// </summary>
         public DbSet<Author> Authors { get; set; }
 
-        /// <summary>
-        /// Loans DbSet
-        /// </summary>
         public DbSet<Loan> Loans { get; set; }
 
-        /// <summary>
-        /// Configures the model using Fluent API
-        /// </summary>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

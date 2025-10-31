@@ -5,10 +5,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Library.Infrastructure.Migrations
 {
-    /// <inheritdoc />
     public partial class RemoveImageUrlFromBook : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
@@ -193,7 +191,6 @@ namespace Library.Infrastructure.Migrations
                 oldType: "uniqueidentifier");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(

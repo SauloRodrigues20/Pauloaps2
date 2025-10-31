@@ -14,7 +14,6 @@ namespace Library.Infrastructure.Migrations
     [Migration("20251030131517_RemoveImageUrlFromBook")]
     partial class RemoveImageUrlFromBook
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

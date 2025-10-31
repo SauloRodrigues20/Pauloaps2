@@ -4,9 +4,6 @@ using Library.Application.ViewModels;
 
 namespace Library.Web.Controllers
 {
-    /// <summary>
-    /// Controller for author management operations
-    /// </summary>
     public class AuthorsController : Controller
     {
         private readonly IAuthorService _authorService;
@@ -20,9 +17,6 @@ namespace Library.Web.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// Lists all authors
-        /// </summary>
         public async Task<IActionResult> Index()
         {
             try
@@ -38,9 +32,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows author details
-        /// </summary>
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -66,17 +57,11 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Shows create form
-        /// </summary>
         public IActionResult Create()
         {
             return View();
         }
 
-        /// <summary>
-        /// Handles create form submission
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AuthorViewModel authorViewModel)
@@ -99,9 +84,6 @@ namespace Library.Web.Controllers
             return View(authorViewModel);
         }
 
-        /// <summary>
-        /// Shows edit form
-        /// </summary>
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -127,9 +109,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Handles edit form submission
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, AuthorViewModel authorViewModel)
@@ -164,9 +143,6 @@ namespace Library.Web.Controllers
             return View(authorViewModel);
         }
 
-        /// <summary>
-        /// Shows delete confirmation
-        /// </summary>
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -195,9 +171,6 @@ namespace Library.Web.Controllers
             }
         }
 
-        /// <summary>
-        /// Handles delete confirmation
-        /// </summary>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)

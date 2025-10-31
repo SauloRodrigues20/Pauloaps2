@@ -4,9 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library.Infrastructure.Repositories
 {
-    /// <summary>
-    /// Repository implementation for loan operations
-    /// </summary>
     public class LoanRepository : ILoanRepository
     {
         private readonly LibraryDbContext _context;

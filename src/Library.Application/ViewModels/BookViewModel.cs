@@ -2,9 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Library.Application.ViewModels
 {
-    /// <summary>
-    /// View model for displaying and editing book information
-    /// </summary>
     public class BookViewModel
     {
         public Guid Id { get; set; }

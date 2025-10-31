@@ -2,9 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Library.Application.ViewModels
 {
-    /// <summary>
-    /// View model for displaying and editing author information
-    /// </summary>
     public class AuthorViewModel
     {
         public Guid Id { get; set; }
@@ -19,9 +16,10 @@ namespace Library.Application.ViewModels
         [Display(Name = "Sobrenome")]
         public string LastName { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "A data de nascimento é obrigatória")]
         [DataType(DataType.Date)]
         [Display(Name = "Data de Nascimento")]
-        public DateTime? BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         [StringLength(2000, ErrorMessage = "A biografia não pode ter mais de 2000 caracteres")]
         [Display(Name = "Biografia")]

@@ -27,7 +27,7 @@
                 <dd class="col-sm-9">@Model.FullName</dd>
 
                 <dt class="col-sm-3">Data de Nascimento</dt>
-                <dd class="col-sm-9">@(Model.BirthDate?.ToString("dd/MM/yyyy") ?? "N/A")</dd>
+                <dd class="col-sm-9">@Model.BirthDate.ToString("dd/MM/yyyy")</dd>
 
                 <dt class="col-sm-3">Biografia</dt>
                 <dd class="col-sm-9">@(Model.Biography ?? "Nenhuma biografia disponível")</dd>

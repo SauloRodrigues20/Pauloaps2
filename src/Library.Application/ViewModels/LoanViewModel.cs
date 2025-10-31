@@ -2,9 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Library.Application.ViewModels
 {
-    /// <summary>
-    /// View model for displaying and editing loan information
-    /// </summary>
     public class LoanViewModel
     {
         public Guid Id { get; set; }

@@ -277,7 +277,7 @@ dotnet watch run --project src/Library.Web
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins educacionais como parte do trabalho da disciplina de Programação de Aplicações.
+Este projeto foi desenvolvido para fins educacionais 
 
 ## 👥 Autor
 
